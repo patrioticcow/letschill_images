@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+	<meta http-equiv="Content-Security-Policy"
+	      content="default-src *;
+               script-src 'self' 'unsafe-inline' 'unsafe-eval'
+                           127.0.0.1:*
+                           http://*.massinflux.com
+                           http://*.google.com
+                           http://*.gstatic.com
+                           http://*.googleapis.com
+                           http://*.firebaseio.com
+                           https://*.google.com
+                           https://*.gstatic.com
+                           https://*.googleapis.com
+                           https://*.firebaseio.com
+                           ;
+               style-src  'self' 'unsafe-inline'
+                          127.0.0.1
+                           http://*.massinflux.com
+                           http://*.google.com
+                           http://*.gstatic.com
+                           http://*.googleapis.com
+                           http://*.firebaseio.com
+                           https://*.google.com
+                           https://*.gstatic.com
+                           https://*.googleapis.com
+                           https://*.firebaseio.com
+">
+
+	<title>Let's Chill API</title>
+
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+	<!-- AngularFire -->
+	<script src="bower_components/firebase/firebase.js"></script>
+</head>
+
+<body>
+nothing here
+<script>
+var firebaseUrl = 'https://myappdatabase.firebaseio.com/';
+var imagesRef = new Firebase(firebaseUrl + 'user-images/');
+imagesRef.child('simplelogin:20').child('image').on("value", function (snapshot) {
+	var details = snapshot.val();
+	console.log(details);
+});
+
+</script>
+
+</body>
+</html>

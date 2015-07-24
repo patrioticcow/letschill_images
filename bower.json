@@ -1,0 +1,19 @@
+{
+  "name": "letschill_api",
+  "version": "0.0.0",
+  "authors": [
+    "cristi <cristi.catea@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.7"
+  }
+}
